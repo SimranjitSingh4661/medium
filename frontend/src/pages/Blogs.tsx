@@ -94,9 +94,12 @@ export default function Component() {
   }
 
   return (
-    <div className="w-full  h-full min-h-[100svh] bg-[#d6e2ea] ">
+    <div className="w-full  h-full min-h-[100svh] bg-[#d6e2ea]">
       <Header btnText="Write new" onBtnPress={onCreateNewBlogPress} />
-      <div className="h-full flex flex-col gap-8">
+      <div className="h-full flex flex-col gap-8 mt-6">
+        {blogs?.length === 0 && (
+          <div className="font-extrabold text-2xl">No blogs found</div>
+        )}
         {blogs?.map((item, idx) => {
           if (blogs?.length === idx + 1) {
           }

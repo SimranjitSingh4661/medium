@@ -112,14 +112,14 @@ const Blog = ({
         {title}
       </h2>
       <div className="flex flex-row ">
-        <div className="h-96 w-[70%]">
+        <div className="pb-24 w-[70%]">
           <div className="justify-content-between">
             <Markdown options={{ overrides: markdownComponents }}>
               {content}
             </Markdown>
           </div>
         </div>
-        <div className="h-96 w-[30%] pl-10">
+        <div className="w-[30%] pl-10">
           <div className="w-full max-w-md p-4 mt-2 bg-[#f0f3f5] border  border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             <div className="flex items-center justify-between mb-4">
               <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">

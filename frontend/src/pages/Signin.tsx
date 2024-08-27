@@ -19,8 +19,8 @@ export default function Component() {
     stateMachines: STATE_MACHINE_NAME,
   });
 
-  const [email, setEmail] = useState("simran@gmail.com");
-  const [password, setPassword] = useState("123456");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 

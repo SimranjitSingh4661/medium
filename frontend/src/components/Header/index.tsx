@@ -43,56 +43,54 @@ function Header({
   };
 
   return (
-    <div>
-      <div className="flex justify-between px-20 py-5">
-        <a href="/">
-          <img
-            src={LOGO}
-            alt="Image"
-            className="w-fit h-10"
-            style={{
-              objectFit: "contain",
-            }}
-          />
-        </a>
-        <div className="flex flex-row">
-          {!!btnText && (
-            <div className="mr-10">
-              <Button
-                type="submit"
-                className="w-full"
-                variant={"default"}
-                isLoading={loading}
-                disabled={btnDisabled}
-                onClick={onBtnPress}
-              >
-                {btnText}
-              </Button>
-            </div>
-          )}
-          <DropdownMenu>
-            <DropdownMenuTrigger>
-              {!!userData?.name && (
-                <div className="hover:cursor-pointer relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                  <span className="font-medium text-gray-600 dark:text-gray-300">
-                    {userData?.name?.[0]?.toLocaleUpperCase() +
-                      userData?.name?.[1]}
-                  </span>
-                </div>
-              )}
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuLabel>My Profile</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem
-                onClick={onLogOutPress}
-                className="font-bold text-red-600"
-              >
-                Log Out
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
+    <div className="flex justify-between px-20 py-5 border border-b-[1px] border-b-gray-400">
+      <a href="/">
+        <img
+          src={LOGO}
+          alt="Image"
+          className="w-fit h-10"
+          style={{
+            objectFit: "contain",
+          }}
+        />
+      </a>
+      <div className="flex flex-row">
+        {!!btnText && (
+          <div className="mr-10">
+            <Button
+              type="submit"
+              className="w-full"
+              variant={"default"}
+              isLoading={loading}
+              disabled={btnDisabled}
+              onClick={onBtnPress}
+            >
+              {btnText}
+            </Button>
+          </div>
+        )}
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            {!!userData?.name && (
+              <div className="hover:cursor-pointer relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                <span className="font-medium text-gray-600 dark:text-gray-300">
+                  {userData?.name?.[0]?.toLocaleUpperCase() +
+                    userData?.name?.[1]}
+                </span>
+              </div>
+            )}
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>My Profile</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem
+              onClick={onLogOutPress}
+              className="font-bold text-red-600"
+            >
+              Log Out
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   );
