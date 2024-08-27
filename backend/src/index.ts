@@ -21,7 +21,8 @@ app.use(logger());
 app.use(
   "*",
   cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: ["https://writestuff-pi.vercel.app"],
     allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );

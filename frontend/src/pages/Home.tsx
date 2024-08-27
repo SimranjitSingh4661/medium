@@ -22,7 +22,12 @@ export default function Component() {
   };
 
   const onExplorePress = () => {
-    navigate("/blogs");
+    const token = localStorage.getItem("token");
+    if (!!token) {
+      navigate("/blogs");
+    } else {
+      navigate("/signup");
+    }
     // toast.error("This didn't work.")
   };
 
