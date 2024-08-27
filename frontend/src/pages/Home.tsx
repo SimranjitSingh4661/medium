@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useRive } from "@rive-app/react-canvas";
 import LOGO from "@/assets/images/writelogo.png";
-import toast from "react-hot-toast";
 
 export default function Component() {
   const navigate = useNavigate();
@@ -20,10 +19,6 @@ export default function Component() {
 
   const onGetStartedPress = () => {
     navigate("/signup");
-  };
-
-  const onSignInPress = () => {
-    navigate("/signin");
   };
 
   const onExplorePress = () => {

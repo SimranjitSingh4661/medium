@@ -9,7 +9,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useNavigate } from "react-router-dom";
 import { decodeUserToken } from "@/utils/jwtHelper";
 import { Button } from "@/components/ui/button";
 
@@ -25,7 +24,6 @@ function Header({
   btnDisabled = false,
   onBtnPress = () => {},
 }) {
-  const navigate = useNavigate();
   const [userData, setUserData] = useState<UserData>({
     id: "",
     name: "",

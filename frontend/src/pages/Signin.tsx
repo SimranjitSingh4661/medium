@@ -124,6 +124,10 @@ export default function Component() {
     navigate("/signup");
   };
 
+  if (!!errorMessage) {
+    return <div>Error </div>;
+  }
+
   return (
     <div className="w-full lg:grid lg:grid-cols-2 h-full min-h-[100svh] bg-[#d6e2ea] ">
       <div className="h-full">

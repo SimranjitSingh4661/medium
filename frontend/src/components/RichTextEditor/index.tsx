@@ -90,7 +90,7 @@ function RichTextEditor({ id = "" }: RichTextEditorProps) {
     try {
       if (!!id) {
         //Update blog api
-        const res = await updateBlogApi({
+        await updateBlogApi({
           published: false,
           title: formTitle,
           content: formValue,
@@ -100,7 +100,7 @@ function RichTextEditor({ id = "" }: RichTextEditorProps) {
         localStorage.removeItem("blog");
       } else {
         //Create new blog api
-        const res = await createBlogApi({
+        await createBlogApi({
           title: formTitle,
           content: formValue,
         });

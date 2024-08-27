@@ -101,8 +101,6 @@ export default function Component() {
         password,
       });
 
-      console.log("Res", res);
-
       localStorage.setItem("token", res?.token);
 
       triggerSuccess();
@@ -134,7 +132,9 @@ export default function Component() {
     navigate("/signin");
   };
 
-  // console.log('HOST', process?.env?.HOST)
+  if (!!errorMessage) {
+    return <div>Error </div>;
+  }
 
   return (
     <div className="w-full lg:grid lg:grid-cols-2 h-full min-h-[100svh] bg-[#d6e2ea] ">

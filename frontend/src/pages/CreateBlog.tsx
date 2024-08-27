@@ -1,8 +1,7 @@
 import RichTextEditor from "@/components/RichTextEditor";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Component() {
-  const navigate = useNavigate();
   const { id } = useParams();
 
   console.log("Router Parmas --->", id);

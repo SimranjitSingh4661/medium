@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback, Fragment } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import BlogCard from "@/components/BlogCard";
@@ -80,7 +80,6 @@ export default function Component() {
     navigate(`/create`);
   };
 
-
   if (loading && blogs.length === 0) {
     return (
       <div className="flex flex-col h-screen w-screen justify-center items-center content-center bg-[#d6e2ea]">
@@ -88,6 +87,10 @@ export default function Component() {
         <div className="font-extrabold text-2xl">loading...</div>
       </div>
     );
+  }
+
+  if (!!error) {
+    return <div>Error </div>;
   }
 
   return (
