@@ -22,7 +22,6 @@ export default function Component() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     setLook();
@@ -123,10 +122,6 @@ export default function Component() {
   const onSignupPress = () => {
     navigate("/signup");
   };
-
-  if (!!errorMessage) {
-    return <div>Error </div>;
-  }
 
   return (
     <div className="w-full lg:grid lg:grid-cols-2 h-full min-h-[100svh] bg-[#d6e2ea] ">

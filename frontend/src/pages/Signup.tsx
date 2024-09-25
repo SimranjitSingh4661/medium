@@ -23,7 +23,6 @@ export default function Component() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     setLook();
@@ -82,7 +81,7 @@ export default function Component() {
   };
 
   if (rive) {
-   // console.log("hi", rive.contents);
+    // console.log("hi", rive.contents);
   }
 
   const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -132,10 +131,6 @@ export default function Component() {
   const onSignInPress = () => {
     navigate("/signin");
   };
-
-  if (!!errorMessage) {
-    return <div>Error </div>;
-  }
 
   return (
     <div className="w-full lg:grid lg:grid-cols-2 h-full min-h-[100svh] bg-[#d6e2ea] ">
