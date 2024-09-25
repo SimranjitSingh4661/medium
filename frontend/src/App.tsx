@@ -5,6 +5,7 @@ import Signin from "./pages/Signin";
 import Blog from "./pages/Blogs";
 import DisplayBlog from "./pages/DisplayBlog";
 import CreateBlog from "@/pages/CreateBlog";
+import ErrorPage from "@/pages/ErrorPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/blogs" element={<Blog />} />
           <Route path="/:id" element={<DisplayBlog />} />
           <Route path="/create/:id?" element={<CreateBlog />} />
+          <Route path="/error" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </>

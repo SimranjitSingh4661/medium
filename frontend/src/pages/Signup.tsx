@@ -82,14 +82,14 @@ export default function Component() {
   };
 
   if (rive) {
-    console.log("hi", rive.contents);
+   // console.log("hi", rive.contents);
   }
 
   const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
     if (!email || !password || !userName) {
-      setErrorMessage("Please enter your email and password.");
+      toast.error("Please enter your email and password.");
       triggerFail();
       return;
     }
@@ -113,6 +113,7 @@ export default function Component() {
     } catch (error: any) {
       setLoading(false);
       toast.error(error?.errorMessage);
+      navigate("/error");
     }
   };
 

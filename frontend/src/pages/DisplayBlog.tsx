@@ -57,13 +57,14 @@ export default function Component() {
         setBlog(res);
       } catch (error) {
         console.log("Error", error);
+        navigate("/error");
       } finally {
         setLoading(false);
       }
     })();
   }, []);
 
-  console.log("Params", id, userData);
+  //console.log("Params", id, userData);
 
   const onCreateNewBlogPress = () => {
     navigate(`/create`);

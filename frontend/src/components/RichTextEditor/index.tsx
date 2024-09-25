@@ -86,6 +86,10 @@ function RichTextEditor({ id = "" }: RichTextEditorProps) {
   };
 
   const onFormPublishPress = async () => {
+    if (!formTitle || !formValue) {
+      toast.error(`Please enter blog details.`);
+      return;
+    }
     setLoading(true);
     try {
       if (!!id) {
@@ -110,6 +114,7 @@ function RichTextEditor({ id = "" }: RichTextEditorProps) {
       console.log("Errror", error);
     } finally {
       setLoading(false);
+      navigate("/error");
     }
   };
 
